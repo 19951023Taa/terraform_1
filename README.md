@@ -1,6 +1,6 @@
 初期構築手順  
 1.S3バケットを手動で作成  
-2.tfbackendファイルのバケット名を01で作成したバケット名に変更する  
+2.tfbackendファイルのバケット名を作成したバケット名に変更する  
 3.initしてからS3をimportする  
 terraform init -reconfigure -backend-config=_pd.tfbackend  
 terraform import -var-file=_pd.tfvars module.s3_terraform_main.aws_s3_bucket.this [バケット名]  
