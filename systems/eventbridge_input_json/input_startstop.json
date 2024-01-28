@@ -1,0 +1,6 @@
+{
+    "resourceType": "${resourceType}",
+    "action": "${action}",
+    "resourceIds": ${jsonencode(resourceIds)},
+    "resourceRegion": "${resourceRegion}"
+  }

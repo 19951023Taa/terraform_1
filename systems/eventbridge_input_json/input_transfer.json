@@ -1,0 +1,4 @@
+{
+    "LogGroupName": "${LogGroupName}",
+    "DestinationPrefix": "${DestinationPrefix}"
+  }
