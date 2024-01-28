@@ -23,4 +23,4 @@ IAMuser_gpgkey作成方法、パスワード復号方法
 terraform output -json | ruby -rjson -e 'json = JSON.load(ARGF); values =
 json["username"]["value"]; keys = %w(id encrypted_password); puts
 [keys, *keys.map{|key| values.map{|value| v = value[1][key].split;
-key == "encrypted_password" ? v.map{|s| echo #{s} | \ base64 -di | gpg -r tpg-cr-gpg-key.chomp} : v}}.transpose].map{|a| a.join(",")}'
+key == "encrypted_password" ? v.map{|s| echo #{s} | \ base64 -di | gpg -r tpg-cr-gpg-key.chomp} : v}}.transpose].map{|a| a.join(",")}'  
