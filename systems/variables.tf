@@ -14,9 +14,6 @@ variable "subnet_cidrs" {}
 variable "key_name" {}
 variable "private_ip" {}
 
-/* RDS */
-variable "rds_password" {}
-
 # /* Route53 */
 # variable "domain_name_api" {}
 # variable "domain_name_web" {}
