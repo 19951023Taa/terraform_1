@@ -47,3 +47,6 @@ keypair/*.pem
 # local.tf  pd.tfvars
 _*.tfvars
 locals.tf
+
+# iam_gpg
+iam_user_gpg

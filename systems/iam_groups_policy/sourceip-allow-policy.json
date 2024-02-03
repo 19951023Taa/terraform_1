@@ -1,0 +1,23 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "SoruceIPallow",
+            "Effect": "Deny",
+            "Action": "*",
+            "Resource": "*",
+            "Condition": {
+                "NotIpAddress": {
+                    "aws:SourceIp": [
+                        "11.11.11.11/32",
+                        "22.22.22.22/32",
+                        "33.33.33.33/32"
+                    ]
+                },
+                "Bool": {
+                    "aws:ViaAWSService": "false"
+                }
+            }
+        }
+    ]
+}
