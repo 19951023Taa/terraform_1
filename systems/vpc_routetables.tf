@@ -14,6 +14,12 @@ module "rtb_private" {
   routes     = local.private_01.routes
 }
 
+resource "aws_route_table_association" "this" {
+  for_each       = var.subnet_cidrs
+  subnet_id      = module.vpc_subnets["${each.key}"].subnet_id
+  route_table_id = substr("${each.key}", 0, 6) == "public" ? module.rtb_public.table_id : module.rtb_private.table_id
+}
+
 locals {
   public_01 = {
     name = "${local.PROJECT}-${local.SYS}-${var.ENV}-public-route-01"
